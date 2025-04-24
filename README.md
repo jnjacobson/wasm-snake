@@ -1,16 +1,30 @@
 # WASM Snake Game
 
-A Snake game implementation using Rust and WebAssembly, running in the browser.
+A Snake game implementation using Rust and WebAssembly, running in the browser. Built with Vite, Tailwind CSS, and Rust WASM.
 
-## Development
 
-Requirements:
+
+## Requirements
+
 - Docker
 - Docker Compose
 
-To start development:
+## Development
+
+1. Start the development container:
 ```bash
-docker compose up
+make up
 ```
 
-This will start the development environment with hot reloading. 
+2. Build the WASM module:
+```bash
+make build
+```
+
+3. The development server will be available at `http://localhost:5173` with hot reloading enabled.
+
+## Project Structure
+
+- `snake-game/` - Rust WASM source code
+- `src/` - Frontend JavaScript code
+- `index.html` - Main HTML entry point
