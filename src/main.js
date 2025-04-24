@@ -1,16 +1,12 @@
 import './style.css'
 
-import init, { Game } from '../snake-game/pkg/snake_game.js';
+import init, { SnakeGame } from '../snake-game/pkg/snake_game.js';
 
 async function run() {
   await init();
   const canvas = document.getElementById('snake-canvas');
 
-  const game = Game.new(canvas);
-
-  document.addEventListener('keydown', (event) => {
-    game.change_direction(event.key);
-  });
+  const game = new SnakeGame(canvas);
 
   function gameLoop() {
     game.update();
