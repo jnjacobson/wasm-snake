@@ -1,0 +1,9 @@
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "4000:5173"  # For web server
+    command: bash -c "npm install && npm run dev"
+    tty: true 
